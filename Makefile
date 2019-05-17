@@ -31,3 +31,12 @@ fulltest: install
 #
 status:
 	@./scripts/status
+
+#
+# run unit tests on project packages
+#
+utest: 
+	go test github.com/Oneledger/protocol/data \
+		github.com/Oneledger/protocol/serialize \
+		-coverprofile a.out
+
